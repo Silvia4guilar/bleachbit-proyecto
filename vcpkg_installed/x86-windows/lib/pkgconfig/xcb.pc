@@ -1,0 +1,14 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+xcbproto_version=1.14.1
+
+Name: XCB
+Description: X-protocol C Binding
+Version: 1.14
+Requires.private: xau >= 0.99.2 pthread-stubs xdmcp
+Libs: "-L${libdir}" -lxcb
+Libs.private: -lws2_32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -lcomdlg32 -ladvapi32
+Cflags: "-I${includedir}"
+
